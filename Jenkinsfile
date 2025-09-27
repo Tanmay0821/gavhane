@@ -8,7 +8,7 @@ pipeline {
                 checkout scm
             }
         }
-    }
+    
 
     stage('connecting web-server'){
         steps {
@@ -17,5 +17,6 @@ pipeline {
             }
                                                         
         }
+    }
     }
 }
