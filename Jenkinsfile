@@ -8,15 +8,5 @@ pipeline {
                 checkout scm
             }
         }
-    
-
-    stage('connecting web-server'){
-        steps {
-            withCredentials([sshUserPrivateKey(credentialsId: 'ssh-21', keyFileVariable: 'SSH_KEY')]) {
-               sh 'ssh -i "${SSH_KEY}" -o StrictHostKeyChecking=no ec2-user@13.232.103.179'
-            }
-                                                        
-        }
-    }
     }
 }
