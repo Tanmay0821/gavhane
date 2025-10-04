@@ -13,11 +13,9 @@ pipeline {
 
         stage('installing nginx') {
             steps { 
-                withCredentials([sshUserPrivateKey(credentialsId: 'slave-21',
-                                                  keyFileVariable: 'AppVM')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'slave-21',keyFileVariable: 'AppVM')]) {
                     sh '''
-                        ssh -i "$AppVM" -o StrictHostKeyChecking=no ec2-user@65.1.131.143 \
-                        "sudo yum install -y nginx"
+                        ssh -i "$AppVM" -o StrictHostKeyChecking=no ec2-user@65.1.131.143 "sudo yum install -y nginx"
                     '''
                 }
                
