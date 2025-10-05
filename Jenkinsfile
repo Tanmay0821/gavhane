@@ -16,6 +16,7 @@ pipeline {
                 // This command checks out the source code from the configured SCM
                 checkout scm
                   sh "pwd"
+                echo "this is rahul"
             }
         }
 
