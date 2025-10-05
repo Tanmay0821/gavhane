@@ -17,6 +17,7 @@ pipeline {
                 checkout scm
                   sh "pwd"
                 echo "this is rahul"
+                sh "ls -lrt" 
             }
         }
 
