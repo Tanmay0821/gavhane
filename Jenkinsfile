@@ -23,9 +23,9 @@ pipeline {
 
           stage('coping code') {
             steps {
-                sh "sudo mkdir /opt/python-21"
-                sh "sudo cp /home/ec2-user/jenkins2/workspace/Test/first-jen-job/sample.py /opt/python-21/sample.py"
-                sh "sudo cp /home/ec2-user/jenkins2/workspace/Test/first-jen-job/requirements.txt /opt/python-21/requirements.txt"
+                sh "sudo mkdir /opt/python-08"
+                sh "sudo cp /home/ec2-user/jenkins2/workspace/Test/first-jen-job/sample.py /opt/python-08/sample.py"
+                sh "sudo cp /home/ec2-user/jenkins2/workspace/Test/first-jen-job/requirements.txt /opt/python-08/requirements.txt"
                 sh " cd /opt/python" 
                 sh "nohup python3 sample.py"
                 
