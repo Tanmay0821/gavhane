@@ -11,6 +11,15 @@ pipeline {
             }
         }
 
+             stage('Installing python') {
+            steps {
+                // This command checks out the source code from the configured SCM
+                   sh "sudo apt install python3 python3-pip"
+                    sh "pwd"
+                   
+            }
+        }
+
     
     }
 }
