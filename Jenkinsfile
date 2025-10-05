@@ -24,7 +24,10 @@ pipeline {
           stage('coping code') {
             steps {
                 //  sh "sudo mkdir /opt/python"
-                sh "cp /home/ec2-user/jenkins2/workspace/Test/first-jen-job /opt/python/sample.py"
+                sh "cp /home/ec2-user/jenkins2/workspace/Test/first-jen-job/sample.py /opt/python/sample.py"
+                sh "cp /home/ec2-user/jenkins2/workspace/Test/first-jen-job/requirements.txt /opt/python/requirements.txt"
+                sh " cd /opt/python" 
+                sh "nohup python3 sample.py &"
                 
             }
         }
