@@ -23,7 +23,7 @@ pipeline {
 
           stage('coping code') {
             steps {
-                  sh "mkdir /opt/python"
+                  sh "sudo mkdir /opt/python"
                 
             }
         }
