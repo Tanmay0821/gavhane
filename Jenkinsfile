@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'slave-21'}
+    agent any
 
     stages {
         stage('Checkout Code') {
@@ -11,19 +11,15 @@ pipeline {
             }
         }
 
-        stage('installing nginx') {
-            steps { 
-                withCredentials([sshUserPrivateKey(credentialsId: 'slave-21',keyFileVariable: 'AppVM')]) {
-                    sh '''
-                        ssh -i '{$AppVM}' -o StrictHostKeyChecking=no ec2-user@13.201.28.185 "sudo yum install -y nginx"
-                    '''
-                }
+      //  stage('installing nginx') {
+        //    steps { 
+          //      withCredentials([sshUserPrivateKey(credentialsId: 'slave-21',keyFileVariable: 'AppVM')]) {
+            //        sh '''
+              //          ssh -i '{$AppVM}' -o StrictHostKeyChecking=no ec2-user@13.201.28.185 "sudo yum install -y nginx"
+                //    '''
+               // }
                
-            }
-        }
-
-
-           
-
+           // }
+       // }
     }
 }
