@@ -15,7 +15,8 @@ pipeline {
             steps { 
                 withCredentials([sshUserPrivateKey(credentialsId: 'ssh-21',keyFileVariable: 'ssh_key_file')]) {
                     sh '''
-                        ssh -i '{$ssh_key_file}' -o StrictHostKeyChecking=no ec2-user@13.200.251.107  "hostname -i"
+                       ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.200.251.107 "hostname -i"
+
                     '''
                 }
                
