@@ -11,15 +11,17 @@ pipeline {
             }
         }
 
-      //  stage('installing nginx') {
-        //    steps { 
-          //      withCredentials([sshUserPrivateKey(credentialsId: 'slave-21',keyFileVariable: 'AppVM')]) {
-            //        sh '''
-              //          ssh -i '{$AppVM}' -o StrictHostKeyChecking=no ec2-user@13.201.28.185 "sudo yum install -y nginx"
-                //    '''
-               // }
+        stage('installing nginx') {
+            steps { 
+                withCredentials([sshUserPrivateKey(credentialsId: 'ssh-21',keyFileVariable: 'ssh_key_file')]) {
+                    sh '''
+                        ssh -i '{ssh_key_file}' -o StrictHostKeyChecking=no ec2-user@13.200.251.107  "hostname -i"
+                    '''
+                }
                
-           // }
-       // }
+            }
+        }
+
+        
     }
 }
