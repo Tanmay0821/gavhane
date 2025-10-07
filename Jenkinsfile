@@ -23,14 +23,11 @@ pipeline {
 
           stage('coping code') {
             steps {
-              //  sh "sudo mkdir /opt/python"
-                sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/sample.py /opt/python/sample.py"
-                sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python/requirements.txt"
-                sh " cd /opt/python" 
+                sh "sudo mkdir /opt/python-1"
+                sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/sample.py /opt/python-1/sample.py"
+                sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python-1/requirements.txt"
+                sh " cd /opt/python-1" 
                 sh "nohup python3 sample.py &"
-               // sh "sudo pip3 install -r requirements.txt"
-               //sh "pkill -f sample.py || true"
-               //sh "nohup python3 sample.py > flask.log 2>&1 &"
             }
         }
 
