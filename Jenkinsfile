@@ -19,11 +19,11 @@ pipeline {
                        ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.127.252.144 "hostname -i"
                      ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.127.252.144 "sudo yum install nginx -y"
                     ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.127.252.144 "sudo systemctl enable nginx" 
-                    
+                    scp -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.127.252.144 "/var/lib/jenkins/workspace/Tanmay/jenkins-nginx/tanmay.html /usr/share/nginx/html/index.html"
                         
                     '''
                 }
-               //   scp -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.127.252.144 ""
+               
             }
         }
 
