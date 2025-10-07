@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'slave-21'}
+    agent { label 'slave-08'}
 
     stages {
           stage('Installing python') {
