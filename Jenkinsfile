@@ -29,7 +29,7 @@ pipeline {
                 sh " cd /opt/python" 
                // sh "nohup python3 sample.py &"
                 sh "sudo pip3 install -r requirements.txt"
-                sh "pkill -f app.py || true"
+                sh "pkill -f sample.py || true"
                 sh "nohup python3 sample.py > flask.log 2>&1 &"
             }
         }
