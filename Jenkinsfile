@@ -23,7 +23,7 @@ pipeline {
 
           stage('coping code') {
             steps {
-                sh "sudo mkdir /opt/python-1"
+              //  sh "sudo mkdir /opt/python-1"
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/sample.py /opt/python-1/sample.py"
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python-1/requirements.txt"
                 sh " cd /opt/python-1" 
