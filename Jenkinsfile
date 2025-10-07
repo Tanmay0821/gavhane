@@ -21,22 +21,16 @@ pipeline {
             }
         }
 
-        stage('Checkout') {
-            steps {
-                git branch: 'python-3', url: 'https://github.com/Tanmay0821/gavhane.git'
-            }
-        }
-
           stage('coping code') {
             steps {
               //  sh "sudo mkdir /opt/python"
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/sample.py /opt/python/sample.py"
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python/requirements.txt"
                 sh " cd /opt/python" 
-               // sh "nohup python3 sample.py &"
-                sh "sudo pip3 install -r requirements.txt"
-                sh "pkill -f sample.py || true"
-                sh "nohup python3 sample.py > flask.log 2>&1 &"
+                sh "nohup python3 sample.py &"
+               // sh "sudo pip3 install -r requirements.txt"
+               //sh "pkill -f sample.py || true"
+               //sh "nohup python3 sample.py > flask.log 2>&1 &"
             }
         }
 
