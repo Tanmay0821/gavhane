@@ -20,8 +20,8 @@ pipeline {
                      ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.127.252.144 "sudo yum install nginx -y"
                     ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no ec2-user@13.127.252.144 "sudo systemctl enable nginx" 
                     
-                      scp -i "${ssh_key_file}" -o StrictHostKeyChecking=no index.html ec2-user@13.127.252.144:/tmp/
-                       ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no  ec2-user@13.127.252.144 "sudo mv /tmp/index.html /usr/share/nginx/html/index.html && sudo systemctl restart nginx"
+                      scp -i "${ssh_key_file}" -o StrictHostKeyChecking=no tanmay.html ec2-user@13.127.252.144:/tmp/
+                       ssh -i "${ssh_key_file}" -o StrictHostKeyChecking=no  ec2-user@13.127.252.144 "sudo mv /tmp/tanmay.html /usr/share/nginx/html/index.html && sudo systemctl restart nginx"
                     '''
                 }
                
