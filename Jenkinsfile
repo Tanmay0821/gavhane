@@ -27,7 +27,7 @@ pipeline {
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/sample.py /opt/python/sample.py"
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python/requirements.txt"
                 sh " cd /opt/python" 
-                sh "nohup python3 sample.py > abc 2>&1 &"
+                sh "nohup python3 sample.py &"
                 
             }
         }
