@@ -28,7 +28,9 @@ pipeline {
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python/requirements.txt"
                 sh " cd /opt/python" 
                // sh "nohup python3 sample.py &"
-                sh "nohup python3 /home/ec2-user/sample.py > /home/ec2-user/sample.log 2>&1 &"
+                sh "sudo pip3 install -r requirements.txt"
+                sh "pkill -f app.py || true"
+                sh "nohup python3 sample.py > flask.log 2>&1 &"
             }
         }
 
