@@ -21,6 +21,12 @@ pipeline {
             }
         }
 
+        stage('Checkout') {
+            steps {
+                git branch: 'python-3', url: 'https://github.com/Tanmay0821/gavhane.git'
+            }
+        }
+
           stage('coping code') {
             steps {
               //  sh "sudo mkdir /opt/python"
