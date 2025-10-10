@@ -18,7 +18,7 @@ pipeline {
                   sh "pwd"
                 echo "this is rahul"
                 sh "ls -lrt" 
-              //  sh "ps -ef "
+                sh "ps -ef "
             }
         }
 
