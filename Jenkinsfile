@@ -32,11 +32,11 @@ pipeline {
             }
       }
 
-       // stage('kill'){
-         //   steps{
-         //       sh "kill -9 "    
-       //     }
-     //   }
+        stage('kill'){
+            steps{
+                sh "kill -9 6650"    
+            }
+        }
 
         
     }
