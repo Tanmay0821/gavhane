@@ -28,15 +28,15 @@ pipeline {
                 sh "sudo cp /home/ec2-user/workspace/Tanmay/tanmay-slave/tanmay.py /opt/python-2/tanmay.py"
                 sh "sudo cp /home/ec2-user/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python-2/requirements.txt"
                 sh " cd /opt/python-1" 
-                sh "nohup python3 tanmay.py &"
+                sh " nohup python3 tanmay.py > app.log 2>&1 &"
             }
       }
 
-        stage('kill'){
-            steps{
-                sh "kill -9 6650"    
-            }
-        }
+      //  stage('kill'){
+        //    steps{
+       //         sh "kill -9 6650"    
+       //     }
+      //  }
 
         
     }
