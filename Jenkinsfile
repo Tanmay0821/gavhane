@@ -18,13 +18,13 @@ pipeline {
                   sh "pwd"
                 echo "this is rahul"
                 sh "ls -lrt" 
-                sh "ps -ef "
+              //  sh "ps -ef "
             }
         }
 
           stage('coping code') {
             steps {
-                sh "sudo mkdir /opt/python-2"
+              //  sh "sudo mkdir /opt/python-2"
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/tanmay.py /opt/python-2/tanmay.py"
                 sh "sudo cp /home/ec2-user/jenkins2/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python-2/requirements.txt"
                 sh " cd /opt/python-1" 
