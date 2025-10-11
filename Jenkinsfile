@@ -4,7 +4,7 @@ pipeline {
     stages {
           stage('Installing python') {
             steps {
-                // This command checks out the source code from the configured SCM
+               
                    sh "sudo yum install python3 python3-pip"
                    sh "pip3 install -r requirements.txt"
                     sh "pwd"
@@ -34,11 +34,6 @@ pipeline {
             }
       }
 
-      //  stage('kill'){
-        //    steps{
-       //         sh "kill -9 6650"    
-       //     }
-      //  }
 
         
     }
