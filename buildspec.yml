@@ -16,7 +16,7 @@ phases:
     commands:
       - echo "Building Flask app package"
       - mkdir -p output
-      - zip -r output/flask-app.zip . -x "tanmay.html/" "a.txt/" "README.md/"
+      - zip -r output/flask-app.zip . -x "a.txt/" "README.md/"
   post_build:
     commands:
       - echo "Build and packaging complete!"
