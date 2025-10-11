@@ -29,7 +29,6 @@ pipeline {
                 sh "sudo cp /home/ec2-user/workspace/Tanmay/tanmay-slave/tanmay.py /opt/python-2/tanmay.py"
                 sh "sudo cp /home/ec2-user/workspace/Tanmay/tanmay-slave/requirements.txt /opt/python-2/requirements.txt"
                 sh "cd /opt/python-2" 
-                sh "pkill -f 'python3 tanmay.py' || true"
                 sh "nohup python3 tanmay.py > app.log 2>&1 &"
             }
       }
